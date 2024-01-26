@@ -18,4 +18,17 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1em;
   list-style-type:  none;
-  }
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50px;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: inset 3px 3px 8px #8f8f8f, inset -3px -3px 8px #ffffff;
+  transform: all 250ms linear;
+}
