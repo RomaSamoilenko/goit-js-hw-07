@@ -39,3 +39,10 @@ button.change-color {
   border: none;
   background-color: transparent;
 }
+
+button[data-create],
+button[data-destroy] {
+  width: 88px;
+  height: 40px;
+  border: 15px;
+}
