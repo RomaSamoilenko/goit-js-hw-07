@@ -32,3 +32,10 @@ button {
   box-shadow: inset 3px 3px 8px #8f8f8f, inset -3px -3px 8px #ffffff;
   transform: all 250ms linear;
 }
+
+button.change-color {
+  width: 88px;
+  height: 88px;
+  border: none;
+  background-color: transparent;
+}
