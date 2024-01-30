@@ -10,12 +10,16 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-buttomCreate.addEventListener("clik", () => {
-	if (Number(inputNumber.value) >= 1 && Number(inputNumber.value) <=100) {
-		createBoxes(Number(inputNumber.value));}
-	else {alert"Enter 1 and 100"}
-}
-)
+btnCreate.addEventListener('click', () => {
+	const amount = Number(inputNum.value);
+	if (amount >= 1 && amount <= 100) {
+	  destroyBoxes(); 
+	  let boxesToAdd = createBoxes(amount); 
+	  boxes.append(...boxesToAdd);
+	  inputNum.value = ''; 
+	}
+	else{alert("Ведіть від 1 до 100")}
+  });
 
 const createBoxes = amount => {
 	const elementsToAdd = []
@@ -33,22 +37,13 @@ const destroyBoxes = () => {
 	boxes.innerHTML = ''
 }
 
-btnCreate.addEventListener('click', () => {
-	let boxesToAdd = createBoxes(Number(inputNum.value))
-	boxes.append(...boxesToAdd)
-})
+// btnCreate.addEventListener('click', () => {
+// 	let boxesToAdd = createBoxes(Number(inputNum.value))
+// 	boxes.append(...boxesToAdd)
+// })
 
 // console.log(inputNum.value)
 
 btnDestroy.addEventListener('click', destroyBoxes);
 
 
-btnCreate.addEventListener('click', () => {
-	const amount = Number(inputNum.value);
-	if (amount >= 1 && amount <= 100) {
-	  destroyBoxes(); // Очистити існуючі блоки перед створенням нових
-	  let boxesToAdd = createBoxes(amount); 
-	  boxes.append(...boxesToAdd);
-	  inputNum.value = ''; // Очистити значення поля вводу після створення блоків
-	}
-  });
